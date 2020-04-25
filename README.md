@@ -1,12 +1,10 @@
- <h2>docker-postgresql-</h2>
+ <h2>docker-postgresql-pgadmin</h2>
  Simple container docker with postgresql and pgadmin.
  <br><br>
 <li>1 - Install the docker and compose docker on your machine</li>
 <li>2 - Access the docker-compose.yml directory from the terminal</li>
 <li>3 - Run the command: $ docker-compose up</li>
 <br><br>
-
-
 #
 <br>
 
