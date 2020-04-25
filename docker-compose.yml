@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "passoword"
+    ports:
+      - "15432:5432"
+    volumes:
+      - /var/lib/postgresql/data 
+    networks:
+      - postgres-compose-network
+      
+  pgadmin4:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "user@email.com"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgresql
+    networks:
+      - postgres-compose-network
+
+networks: 
+  postgres-compose-network:
+    driver: bridge
